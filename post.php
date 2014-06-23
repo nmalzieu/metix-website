@@ -16,7 +16,6 @@ if (isset($_POST['name']) && $_POST['name'] != "" && isset($_POST['email']) && $
         );
         $result = curl_exec($ch);
         curl_close($ch);
-        echo($result);
 } else {
     header('HTTP/1.1 400 BAD REQUEST');
 }

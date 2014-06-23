@@ -129,6 +129,9 @@
                                 <button type="submit" id="contact_form_submit" class="btn btn-lg btn-success">Envoyer</button>
                             </div>
                         </div>
+                        <div class="row" id="success_box">
+                        Message envoy&eacute;. Merci pour votre int&eacute;r&ecirc;t!
+                        </div>
                     </form>
                 </div>
             </div>
@@ -185,6 +188,7 @@
     <script src="js/jquery-1.10.2.js"></script>
     <script>
     $(document).ready(function(){
+        $('#success_box').hide();
         $('#contact_form_submit').click(function(event){
             event.preventDefault();
             $.ajax({
@@ -196,7 +200,10 @@
                 message: $('#contact_form_message').val()
               },
               success: function(data){
-                alert(data);
+                $('#contact_form_name').val('');
+                $('#contact_form_email').val('');
+                $('#contact_form_message').val('');
+                $('#success_box').show();
               }
             });
         });
