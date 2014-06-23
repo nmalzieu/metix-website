@@ -267,7 +267,7 @@ section.success {
     position: relative;
     margin-bottom: 0;
     padding-bottom: .5em;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #1a76bd;
 }
 
 .floating-label-form-group input,
@@ -316,7 +316,7 @@ section.success {
 }
 
 form .row:first-child .floating-label-form-group {
-    border-top: 1px solid #eee;
+    border-top: 1px solid #1a76bd;
 }
 
 footer {
